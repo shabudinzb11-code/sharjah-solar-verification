@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SHARJAH SOLAR VERIFICATION</title>
+<style>
+body{font-family:Arial;background:#f1f5f9;margin:0;padding:20px}
+main{max-width:500px;margin:40px auto;background:white;padding:25px;border-radius:15px;box-shadow:0 3px 15px #ccd}
+h1{text-align:center;color:#087b45;font-size:25px}
+p{text-align:center;color:#555}
+label{display:block;margin-top:18px;font-weight:bold}
+input,select,button{width:100%;padding:13px;margin-top:8px;box-sizing:border-box;border:1px solid #bbb;border-radius:8px;font-size:16px}
+button{background:#087b45;color:white;border:0;font-weight:bold;cursor:pointer}
+#result{text-align:center;margin-top:20px;font-size:18px;font-weight:bold}
+footer{text-align:center;color:#777;font-size:12px;margin-top:30px}
+</style>
+</head>
+<body>
+<main>
+<h1>SHARJAH SOLAR VERIFICATION</h1>
+<p>Solar Panel Serial Number Verification</p>
+<label>Select Solar Company</label>
+<select id="company">
+<option value="">Select Company</option>
+<option>Jinko Solar</option>
+<option>Canadian Solar</option>
+<option>JA Solar</option>
+<option>LONGi Solar</option>
+<option>Trina Solar</option>
+</select>
+<label>Enter Serial Number</label>
+<input id="serial" placeholder="Enter panel serial number">
+<button onclick="verify()">VERIFY NOW</button>
+<div id="result">Enter details to verify your panel</div>
+<footer>SHARJAH SOLAR VERIFICATION</footer>
+</main>
+<script>
+function verify(){
+let company=document.getElementById('company').value;
+let serial=document.getElementById('serial').value.trim();
+let result=document.getElementById('result');
+if(!company||!serial){result.textContent='Please select company and enter serial number';return;}
+result.textContent='Verification database is not connected yet. Please contact the administrator.';
+}
+</script>
+</body>
+</html>
